@@ -15,12 +15,35 @@
 
   <!-- Custom styles for this template -->
   <link href="css/small-business.css" rel="stylesheet">
+  <!-- Font Awesome CSS -->
   <link rel="stylesheet" href="css/all.css" />
+  <!-- Academicons CSS -->
   <link rel="stylesheet" href="css/academicons.css" />
+
   <style type="text/css">
     .content {
       margin-top: 0;
-      margin-bottom: 0
+      margin-bottom: 0;
+    }
+
+    .contact-icons {
+      text-align: center;
+      font-size: 1.7em; /* Increase icon size by 1.5 times */
+      margin-top: 0.6em; /* Add space above icons */
+    }
+
+    .contact-icons a {
+      margin: 0 28px; /* Double horizontal space between icons */
+    }
+
+    .contact-icons a i {
+      color: black; /* Change icon color to black */
+    }
+
+    /* Added CSS for the trophy icon */
+    .trophy-icon {
+      color: rgb(255, 196, 0);
+      margin-right: 5px;
     }
   </style>
   <meta http-equiv="Content-Type" content="text/html; charset=gbk">
@@ -41,13 +64,12 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <!-- <li class="nav-item active">
-              <a class="nav-link" href="">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li> -->
-          
+                          <a class="nav-link" href="">Home
+                            <span class="sr-only">(current)</span>
+                          </a>
+                        </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="files/resume.pdf">Resume</a>
+            <a class="nav-link" href="files/CV.pdf">CV</a>
           </li>
         </ul>
       </div>
@@ -62,113 +84,68 @@
       <div class="col-lg-4">
         <img class="img-fluid rounded img-responsive" style="width:80%" src="img/bryan.jpg" alt="">
       </div>
-      <!-- /.col-lg-8 -->
+      <!-- /.col-lg-4 -->
       <div class="col-lg-7">
         <h1>Yu Bryan Zhou</h1>
-        <p><span style="color:#969698">Written as 周宇</a></span></p>
-        <!-- <p>Email: yuzhou [at] cs [dot] ucla [dot] edu </p> -->
-        <p class=" m-0">Hi, welcome to my homepage! I am a first year Computer Science Ph.D. student at UCLA. I am fortunate to be advised by <span
-              style="color:#4169E1"><a href="https://violetpeng.github.io/">Prof. Nanyun Peng</a></span> and <span
+        <p><span style="color:#969698">Written as 周宇</span></p>
+        <p class="m-0">
+          Hi, welcome to my homepage! I am a first year Computer Science Ph.D. student at UCLA. I am fortunate to be advised by <span
+            style="color:#4169E1"><a href="https://violetpeng.github.io/">Prof. Nanyun Peng</a></span> and <span
             style="color:#4169E1"><a href="http://web.cs.ucla.edu/~kwchang/">Prof. Kai-Wei Chang</a></span>, focusing on problems in
-          <strong> Multimodality (Vision + Language) </strong> and <strong> Embodied Learning</strong>.
-          <p></p>
-          <p style="text-align:center">
-            <a href="mailto:yuzhou@cs.ucla.edu">Email</a> &nbsp/&nbsp
-            <a href="https://github.com/bryanzhou008">Github</a> &nbsp/&nbsp
-            <a href="https://scholar.google.com/citations?user=61rJc-YAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-            <a href="https://twitter.com/yu_bryan_zhou">Twitter</a> 
-          </p>
-          <p></p>
-        <p></p>
+          <strong>Multimodality (Vision + Language)</strong> and <strong>Embodied Learning</strong>.
+        </p>
+        <!-- Added space here -->
+        <p class="contact-icons">
+          <a href="mailto:yuzhou@cs.ucla.edu"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/bryanzhou008"><i class="fab fa-github"></i></a>
+          <a href="https://scholar.google.com/citations?user=61rJc-YAAAAJ&hl=en"><i class="ai ai-google-scholar"></i></a>
+          <a href="https://twitter.com/yu_bryan_zhou"><i class="fab fa-twitter"></i></a>
+        </p>
       </div>
-      <!-- /.col-md-4 -->
+      <!-- /.col-lg-7 -->
     </div>
     <!-- /.row -->
 
-    <!-- <div class=" my-4 text-left" >
-            <h2>About me</h2>
-            <p >Before joining UCLA, I spent one year in <span style="color:#4169E1"><a href="https://engineering.virginia.edu/departments/computer-science">Department of Computer Science, University of Virginia</a></span>. Had a great experience in Charlottesville! </p>
-          <p></p>
-      </div> -->
+    <!-- Publications Section -->
+    <div class="my-4 text-left">
+      <h3>Publications (Selected)</h3>
 
-
-    <div class=" my-4 text-left">
-      <h3>Publications (Selected) </h3> 
-      <!-- <p><a href="https://scholar.google.com/citations?user=61rJc-YAAAAJ&hl=en">[Google Scholar]</a> <a href="https://www.semanticscholar.org/author/Yu-Zhou/2157142269">[Semantic Scholar]</a></p> -->
-
-      <p></p>
-      
       <ul>
-        <li><b><a href="https://arxiv.org/pdf/2410.07166">Embodied Agent Interface: Benchmarking LLMs for Embodied Decision Making
+        <li><b><a href="https://arxiv.org/pdf/2410.07166">Embodied Agent Interface: Benchmarking LLMs for Embodied Decision Making 
         </a></b>
-          <p class='content'>Manling Li*, Shiyu Zhao*, Qineng Wang*, Kangrui Wang*, <strong>Yu Zhou*</strong>(equal contribution), Sanjana Srivastava, Cem Gokmen, Tony Lee, Li Erran Li, Ruohan Zhang, Weiyu Liu, Percy Liang, Li Fei-Fei, Jiayuan Mao, Jiajun Wu.
-          </p>
-          <p>
-            <strong>Neurips 2024</strong>. <strong><span style="color:red">
-              Oral Presentation
-            </span></strong>
-            <strong><span style="color:red"></span>
-              Best Paper Award at SoCal NLP Symposium 2024
-            </span></strong>
-          </p>
+          <p class='content'>Manling Li*, Shiyu Zhao*, Qineng Wang*, Kangrui Wang*, <strong>Yu Zhou*</strong> (equal contribution), Sanjana Srivastava, Cem Gokmen, Tony Lee, Li Erran Li, Ruohan Zhang, Weiyu Liu, Percy Liang, Li Fei-Fei, Jiayuan Mao, Jiajun Wu.</p>
+          <p class='content'><strong>NeurIPS 2024</strong>. <strong><span style="color:red"> Oral Presentation </span></strong></p>
+          <!-- Added the trophy icon here -->
+          <p><strong>SoCal NLP 2024</strong>. <strong><span style="color:red"> Best Paper Award <i class="fas fa-trophy trophy-icon"></i> </span></strong></p>
         </li>
 
         <li><b><a href="https://aclanthology.org/2023.emnlp-main.304.pdf">Localizing Active Objects from Egocentric Vision with Symbolic World Knowledge
         </a></b>
-          <p class='content'>Te-Lin Wu*, <strong>Yu Zhou*</strong> (equal contribution), Nanyun Peng
-          </p>
+          <p class='content'>Te-Lin Wu*, <strong>Yu Zhou*</strong> (equal contribution), Nanyun Peng</p>
           <p>
             <strong>EMNLP 2023</strong>. <strong><span style="color:red">
-              Oral Presentation
-            </span></strong>
+                Oral Presentation
+              </span></strong>
           </p>
         </li>
-        
-          <!-- 
-          GLIPv2: Unifying Localization and Vision-Language Understanding
-          https://arxiv.org/abs/2206.05836
-          Haotian Zhang*, Pengchuan Zhang*, Xiaowei Hu, Yen-Chun Chen, Yu Bryan Zhou, Xiyang Dai, Lijuan Wang, Lu Yuan, Jenq-Neng Hwang, Jianfeng Gao
-          NeurIPS 2022
-        -->
+
         <li><b><a href="https://aclanthology.org/2023.acl-long.303.pdf">Non-Sequential Graph Script Induction via Multimedia Grounding</a></b>
-          <p class='content'> <strong>Yu Zhou</strong>, Sha Li, Manling Li, Xudong Lin, Shih-Fu Chang, Mohit Bansal, Heng Ji          </p>
+          <p class='content'><strong>Yu Zhou</strong>, Sha Li, Manling Li, Xudong Lin, Shih-Fu Chang, Mohit Bansal, Heng Ji</p>
           <p>
             <strong>ACL 2023</strong>.
           </p>
         </li>
-      
-
-       
-      </ul>
-    <!-- </div>
-    <div class=" my-4 text-left">
-      <h2>Education</h2>
-      <ul>
-        <li> Ph.D. (Computer Science), <span style="color:#4169E1"><a href="https://www.ucla.edu/">University of
-              California, Los Angeles</a></span>. 2019.09 - Now </li>
-        <li> B.S. <span style="color:#4169E1"><a href="https://english.pku.edu.cn/">Peking University</a></span>. 2015.09 - 2019.06 </li>
-      </ul>
-    </div> -->
-    <!-- <div class=" my-4 text-left">
-      <h4>Awards</h4>
-      <ul>
-        <li> <a href="https://research.google/outreach/phd-fellowship/recipients/">Google Ph.D. Fellowship 2023</a></li>
-        <li> <a href="https://twitter.com/CVPR/status/1539772091112857600">CVPR 2022 Best Paper Finalist</a></li>
-        <li> <a href="https://www.sciencehub.ucla.edu/2022-amazon-fellows/">Amazon-UCLA Fellowship 2022</a></li>
-      </ul>
-    </div> -->
-
-    <div class=" my-4 text-left">
-      <h3>Services</h3>
-      <p></p>
-      <ul>
-        <li>Reviewing for NeurIPS, ICLR, ACL, EMNLP, NAACL</li>
       </ul>
     </div>
 
-
-    <!-- Content Row -->
-    <!-- /.row -->
+    <!-- Services Section -->
+    <div class="my-4 text-left">
+      <h3>Services</h3>
+      <ul>
+        <li>Reviewing for NeurIPS, ICLR, CVPR, ACL, EMNLP, NAACL</li>
+        <li>Volunteer for ACL 2023</li>
+      </ul>
+    </div>
 
   </div>
   <!-- /.container -->
