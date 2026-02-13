@@ -25,19 +25,16 @@
         "type": "git",
         "url": "https://github.com/BlackrockDigital/startbootstrap-small-business.git"
     },
+    "scripts": {
+        "vendor": "mkdir -p vendor/bootstrap/css vendor/bootstrap/js vendor/jquery && cp node_modules/bootstrap/dist/css/bootstrap.min.css vendor/bootstrap/css/bootstrap.min.css && cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js vendor/bootstrap/js/bootstrap.bundle.min.js && cp node_modules/jquery/dist/jquery.min.js vendor/jquery/jquery.min.js",
+        "dev": "browser-sync start --server --files \"css/*.css,*.html\"",
+        "start": "npm run dev"
+    },
     "dependencies": {
         "bootstrap": "4.3.1",
-        "jquery": "3.4.0",
-        "axios": ">=0.18.1",
-        "randomatic": ">=3.0.0",
-        "lodash": ">=4.17.12",
-        "lodash.template": ">=4.5.0",
-        "braces": ">=2.3.1",
-        "set-value": ">=2.0.1",
-        "minimist": ">=1.2.3"
+        "jquery": "3.4.0"
     },
     "devDependencies": {
-        "browser-sync": "2.24.3",
-        "gulp": "^3.9.1"
+        "browser-sync": "2.24.3"
     }
 }

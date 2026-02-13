@@ -1,3 +1,5 @@
 *.DS_Store
 copy.html
 .vscode
+node_modules/
+npm-debug.log*
