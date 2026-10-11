@@ -18,7 +18,7 @@ npm run dev
 - `old_news.html`: archived legacy page (not linked from `index.html`).
 - `css/`: site styles and icon stylesheets.
 - `img/`: site images.
-- `files/`: downloadable files (for example resume PDF).
+- `files/`: downloadable files (for example CV PDF).
 - `vendor/`: pinned runtime third-party assets used by the page.
 - `docs/`: maintenance and optimization reference notes.
 
