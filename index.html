@@ -28,14 +28,26 @@
       margin-bottom: 0;
     }
 
+    .name-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
     .contact-icons {
-      text-align: center;
-      font-size: 1.7em; /* Increase icon size by 1.5 times */
-      margin-top: 0.6em; /* Add space above icons */
+      font-size: 0.62em; /* relative to the name heading */
+      margin-left: 1.45em; /* spacing after the name */
+      position: relative;
+      top: 0.16em; /* nudge the icons slightly lower */
+      white-space: nowrap;
     }
 
     .contact-icons a {
-      margin: 0 28px; /* Double horizontal space between icons */
+      margin: 0 0.2em; /* keep the icons close together */
+    }
+
+    .contact-icons a:first-child {
+      margin-left: 0;
     }
 
     .contact-icons a i {
@@ -99,7 +111,16 @@
         </p>
       </div>
       <div class="col-lg-8">
-        <h1 class="mb-3">Yu (Bryan) Zhou </h1>
+        <h1 class="mb-3 name-heading">
+          <span>Yu (Bryan) Zhou</span>
+          <span class="contact-icons">
+            <a href="mailto:yuzhou@cs.ucla.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/bryanzhou008" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://scholar.google.com/citations?user=61rJc-YAAAAJ" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+            <a href="https://twitter.com/yu_bryan_zhou" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/yu-bryan-zhou/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </span>
+        </h1>
         <p class="m-0">
             I am a Computer Science Ph.D. student at UCLA, advised by <span style="color:#4169E1">
             <a href="http://web.cs.ucla.edu/~kwchang/">Kai-Wei Chang</a></span> and <span style="color:#4169E1"><a href="https://violetpeng.github.io/">Nanyun Peng</a></span>.
@@ -112,12 +133,6 @@
         <br>
         <p class="m-0">
             Previously, I worked on embodied agents at Stanford SVL, with <span style="color:#4169E1"><a href="https://limanling.github.io/">Manling Li</a></span>, <span style="color:#4169E1"><a href="https://jiajunwu.com/">Jiajun Wu</a></span>, and <span style="color:#4169E1"><a href="https://profiles.stanford.edu/fei-fei-li">Fei-Fei Li</a></span>.
-        </p>
-        <p class="contact-icons">
-          <a href="mailto:yuzhou@cs.ucla.edu"><i class="fas fa-envelope"></i></a>
-          <a href="https://github.com/bryanzhou008"><i class="fab fa-github"></i></a>
-          <a href="https://scholar.google.com/citations?user=61rJc-YAAAAJ"><i class="ai ai-google-scholar"></i></a>
-          <a href="https://twitter.com/yu_bryan_zhou"><i class="fa-brands fa-x-twitter"></i></a>
         </p>
       </div>
     </div>
