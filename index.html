@@ -52,14 +52,12 @@
     }
 
     .contact-icons {
-      text-align: center;
+      width: 15rem; /* a little narrower than the 16rem photo */
+      max-width: 100%;
+      margin: 0.7rem auto 0;
       font-size: 1.6em;
-      margin-top: 0.7rem;
-      margin-bottom: 0;
-    }
-
-    .contact-icons a {
-      margin: 0 0.32em; /* keep the icons close together */
+      text-align: justify;
+      text-align-last: justify; /* spread the icons from edge to edge */
     }
 
     .contact-icons a i {
@@ -97,6 +95,10 @@
 
       .photo-col img {
         max-width: 240px;
+      }
+
+      .photo-col .contact-icons {
+        max-width: 225px;
       }
     }
   </style>
