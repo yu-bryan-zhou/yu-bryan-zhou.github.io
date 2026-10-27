@@ -15,8 +15,6 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="css/small-business.css" rel="stylesheet">
   <!-- Font Awesome CSS -->
   <link rel="stylesheet" href="css/all.css" />
   <!-- Academicons CSS -->
@@ -28,35 +26,78 @@
       margin-bottom: 0;
     }
 
+    .wrap {
+      max-width: 1050px; /* a little narrower than Bootstrap's 1140px container */
+    }
+
+    h1 {
+      font-size: 2.5rem; /* Bootstrap's default h1, same as the original site */
+      margin-bottom: 0;
+    }
+
+    .name-row {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .email {
+      font-size: 1.1rem;
+    }
+
+    .bio-gap {
+      margin-top: 1.3rem !important; /* space between intro paragraphs; overrides .m-0 */
+    }
+
     .contact-icons {
       text-align: center;
       font-size: 1.6em;
       margin-top: 0.7rem;
       margin-bottom: 0;
-      position: relative;
-      left: 0.14em; /* optically centre the row: the envelope's glyph is wider than the X's */
     }
 
     .contact-icons a {
       margin: 0 0.32em; /* keep the icons close together */
     }
 
-    .contact-icons a:first-child {
-      margin-right: 0.5em; /* the wide envelope needs a little more room after it */
-    }
-
     .contact-icons a i {
       color: rgb(2, 123, 255); /* Change icon color to Blue */
     }
 
-    .navbar-brand,
-    .navbar-nav .nav-link {
-      color: white !important;
+    .contact-icons .cv-text {
+      font-size: 0.8em;
       font-weight: bold;
+      vertical-align: 0.12em; /* sit the letters level with the icons */
     }
 
-    .bg-dark {
-      background-color: rgb(52, 58, 64) !important;
+    @media (min-width: 768px) {
+      .photo-col {
+        padding-top: 2.375rem; /* drop the photo a little below the name */
+      }
+    }
+
+    @media (min-width: 992px) {
+      .bio-col {
+        flex: 0 0 69%;
+        max-width: 69%;
+      }
+
+      .photo-col {
+        flex: 0 0 31%;
+        max-width: 31%;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .photo-col {
+        order: -1; /* photo first on phones */
+      }
+
+      .photo-col img {
+        max-width: 240px;
+      }
     }
   </style>
   <style>
@@ -71,62 +112,39 @@
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="">Yu Zhou</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <!-- <li class="nav-item active">
-                          <a class="nav-link" href="">Home
-                            <span class="sr-only">(current)</span>
-                          </a>
-                        </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="files/CV.pdf">CV</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
   <!-- Page Content -->
-  <div class="container">
+  <div class="container wrap">
 
     <!-- Heading Row -->
-    <div class="row my-5">
-      <div class="col-lg-4 text-center mb-4">
-        <img class="img-fluid rounded img-responsive" style="width:80%" src="img/bryan.jpg" alt="Portrait of Yu (Bryan) Zhou" width="800" height="800" loading="lazy" decoding="async">
+    <div class="row mt-5 mb-3">
+      <div class="col-md-8 bio-col">
+        <div class="name-row">
+          <h1>Yu (Bryan) Zhou</h1>
+          <span class="email">yuzhou [AT] cs.ucla.edu</span>
+        </div>
+        <p class="m-0">
+            I am a Computer Science Ph.D. student at UCLA, advised by <span style="color:#4169E1">
+            <a href="http://web.cs.ucla.edu/~kwchang/">Kai-Wei Chang</a></span> and <span style="color:#4169E1"><a href="https://violetpeng.github.io/">Nanyun Peng</a></span>.
+            I work on <strong>Multimodal (Vision + Language)</strong> and <strong class="text-nowrap">Embodied Learning</strong>.
+        </p>
+        <p class="m-0 bio-gap">
+            At Meta, I contributed to grounding post-training for <span style="color:#4169E1"><a href="https://developer.meta.com/ai/lp/start-building/"><strong>Muse Models 🥑 🍉</strong></a></span>. I also built training data pipelines for <span style="color:#4169E1"><a href="https://ai.meta.com/research/sam3/"><strong>Segment Anything Models</strong></a></span> and created <span style="color:#4169E1"><a href="https://arxiv.org/pdf/2511.16719#page=55"><strong>SAM 3 Agent</strong></a></span>.
+        </p>
+        <p class="m-0 bio-gap">
+            Previously, I worked on embodied agents at Stanford SVL, with <span style="color:#4169E1"><a href="https://limanling.github.io/">Manling Li</a></span>, <span style="color:#4169E1"><a href="https://jiajunwu.com/">Jiajun Wu</a></span>, and <span style="color:#4169E1"><a href="https://profiles.stanford.edu/fei-fei-li">Fei-Fei Li</a></span>.
+        </p>
+        <p class="m-0 bio-gap">
+            My research is supported by the Amazon AI PhD Fellowship.
+        </p>
+      </div>
+      <div class="col-md-4 text-center mb-4 photo-col">
+        <img class="img-fluid rounded img-responsive" style="width:16rem" src="img/bryan.jpg" alt="Portrait of Yu (Bryan) Zhou" width="800" height="800" loading="lazy" decoding="async">
         <p class="contact-icons">
-          <a href="mailto:yuzhou@cs.ucla.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="files/CV.pdf" class="cv-text">CV</a>
           <a href="https://github.com/bryanzhou008" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="https://scholar.google.com/citations?user=61rJc-YAAAAJ" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
           <a href="https://www.linkedin.com/in/yu-bryan-zhou/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://twitter.com/yu_bryan_zhou" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-        </p>
-      </div>
-      <div class="col-lg-8">
-        <h1 class="mb-3">Yu (Bryan) Zhou</h1>
-        <p class="m-0">
-            I am a Computer Science Ph.D. student at UCLA, advised by <span style="color:#4169E1">
-            <a href="http://web.cs.ucla.edu/~kwchang/">Kai-Wei Chang</a></span> and <span style="color:#4169E1"><a href="https://violetpeng.github.io/">Nanyun Peng</a></span>.
-            I work on <strong>Multimodal (Vision + Language)</strong> and <strong>Embodied Learning</strong>.
-        </p>
-        <br>
-        <p class="m-0">
-            At Meta, I contributed to grounding post-training for <span style="color:#4169E1"><a href="https://developer.meta.com/ai/lp/start-building/"><strong>Muse Models 🥑 🍉</strong></a></span>. I also built training data pipelines for <span style="color:#4169E1"><a href="https://ai.meta.com/research/sam3/"><strong>Segment Anything Models</strong></a></span> and created <span style="color:#4169E1"><a href="https://arxiv.org/pdf/2511.16719#page=55"><strong>SAM 3 Agent</strong></a></span>.
-        </p>
-        <br>
-        <p class="m-0">
-            Previously, I worked on embodied agents at Stanford SVL, with <span style="color:#4169E1"><a href="https://limanling.github.io/">Manling Li</a></span>, <span style="color:#4169E1"><a href="https://jiajunwu.com/">Jiajun Wu</a></span>, and <span style="color:#4169E1"><a href="https://profiles.stanford.edu/fei-fei-li">Fei-Fei Li</a></span>.
-        </p>
-        <br>
-        <p class="m-0">
-            My research is supported by the Amazon AI PhD Fellowship.
         </p>
       </div>
     </div>
@@ -151,7 +169,7 @@
     </div> -->
 
     <!-- Publications Section -->
-    <div class="mb-5 text-left" style="margin-top: -2rem;">
+    <div class="mb-5 text-left">
       <h3> Selected Works</h3>
       <hr style="border-top: 1px solid #CCCCCC;">
       <!-- <p><i>* indicates equal contribution</i></p> -->
